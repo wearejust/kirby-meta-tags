@@ -6,7 +6,6 @@ use Exception;
 use Kirby\Toolkit\A;
 use Kirby\Cms\Field;
 use Kirby\Cms\Page;
-use Wearejust\MetaTags\MetaTags as Tags;
 
 class MetaTags
 {

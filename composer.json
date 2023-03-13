@@ -7,8 +7,16 @@
     "type": "kirby-plugin",
     "authors": [
         {
-            "name": "Pedro Borges",
-            "email": "oi@pedroborg.es"
+            "name": "Cees van Egmond",
+            "email": "cees.vanegmond@wearejust.com"
+        },
+        {
+            "name": "Sietse Veenman",
+            "email": "sietse.veenman@wearejust.com"
+        },
+        {
+            "name": "Duncan Pronk",
+            "email": "duncan.pronk@wearejust.com"
         }
     ],
     "require": {
@@ -24,7 +32,8 @@
         }
     },
     "extra": {
-        "installer-name": "meta-tags"
+        "installer-name": "kirby-meta-tags",
+        "kirby-cms-path": false
     },
     "config": {
         "allow-plugins": {

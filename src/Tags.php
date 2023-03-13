@@ -1,12 +1,12 @@
 <?php
 
-namespace Wearejust\MetaTags;
+namespace Wearejust\KirbyMetaTags;
 
 /**
  * PHP Meta Tags
  * A bit thanks to https://github.com/pedroborges/meta-tags
  */
-class MetaTags
+class Tags
 {
     protected $indentation;
     protected $order;
