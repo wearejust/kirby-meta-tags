@@ -4,28 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f51e71248a357255872a217f710dea3",
+    "content-hash": "43f6a716e4b11afbcf78230dee1cdfc2",
     "packages": [
         {
             "name": "getkirby/composer-installer",
-            "version": "1.1.4",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/composer-installer.git",
-                "reference": "2d6b8f5601a31caeeea45623e1643fbb437eb94e"
+                "reference": "c98ece30bfba45be7ce457e1102d1b169d922f3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/composer-installer/zipball/2d6b8f5601a31caeeea45623e1643fbb437eb94e",
-                "reference": "2d6b8f5601a31caeeea45623e1643fbb437eb94e",
+                "url": "https://api.github.com/repos/getkirby/composer-installer/zipball/c98ece30bfba45be7ce457e1102d1b169d922f3d",
+                "reference": "c98ece30bfba45be7ce457e1102d1b169d922f3d",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 || ^2.0"
             },
             "require-dev": {
-                "composer/composer": "^1.8",
-                "phpunit/phpunit": "^7.0"
+                "composer/composer": "^1.8 || ^2.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -42,53 +41,17 @@
             ],
             "description": "Kirby's custom Composer installer for the Kirby CMS and for Kirby plugins",
             "homepage": "https://getkirby.com",
-            "time": "2019-02-11T20:27:36+00:00"
-        },
-        {
-            "name": "pedroborges/meta-tags",
-            "version": "v0.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pedroborges/meta-tags.git",
-                "reference": "e6259f598019ab44f12c0e15d4b465d00b4d39cb"
+            "support": {
+                "issues": "https://github.com/getkirby/composer-installer/issues",
+                "source": "https://github.com/getkirby/composer-installer/tree/1.2.1"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pedroborges/meta-tags/zipball/e6259f598019ab44f12c0e15d4b465d00b4d39cb",
-                "reference": "e6259f598019ab44f12c0e15d4b465d00b4d39cb",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "PedroBorges\\MetaTags\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
+            "funding": [
                 {
-                    "name": "Pedro Borges",
-                    "email": "oi@pedroborg.es"
+                    "url": "https://getkirby.com/buy",
+                    "type": "custom"
                 }
             ],
-            "description": "HTML meta tags generator for PHP.",
-            "homepage": "https://github.com/pedroborges/meta-tags",
-            "keywords": [
-                "facebook",
-                "head",
-                "meta",
-                "meta tags",
-                "open graph",
-                "seo",
-                "twitter cards"
-            ],
-            "time": "2018-07-07T18:21:26+00:00"
+            "time": "2020-12-28T12:54:39+00:00"
         }
     ],
     "packages-dev": [],
@@ -98,7 +61,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1.0"
+        "php": ">=8.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }

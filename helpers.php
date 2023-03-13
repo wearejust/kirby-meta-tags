@@ -1,7 +1,7 @@
 <?php
 
 use Kirby\Cms\Page;
-use PedroBorges\KirbyMetaTags\MetaTags;
+use Wearejust\KirbyMetaTags\MetaTags;
 
 if (! function_exists('metaTags')) {
     /**

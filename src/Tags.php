@@ -1,22 +1,15 @@
 <?php
 
-namespace PedroBorges\MetaTags;
+namespace Wearejust\MetaTags;
 
 /**
  * PHP Meta Tags
- *
- * @version   0.0.2
- * @author    Pedro Borges <oi@pedroborg.es>
- * @copyright Pedro Borges <oi@pedroborg.es>
- * @link      https://github.com/pedroborges/meta-tags
- * @license   MIT
+ * A bit thanks to https://github.com/pedroborges/meta-tags
  */
-
 class MetaTags
 {
     protected $indentation;
     protected $order;
-
     protected $tags = [];
 
     /**

@@ -1,12 +1,12 @@
 <?php
 
-namespace PedroBorges\KirbyMetaTags;
+namespace Wearejust\KirbyMetaTags;
 
 use Exception;
 use Kirby\Toolkit\A;
 use Kirby\Cms\Field;
 use Kirby\Cms\Page;
-use PedroBorges\MetaTags\MetaTags as Tags;
+use Wearejust\MetaTags\MetaTags as Tags;
 
 class MetaTags
 {
@@ -16,16 +16,17 @@ class MetaTags
 
     protected $indentation;
     protected $order;
+    protected $data;
     protected $page;
 
     public function __construct(Page $page)
     {
-        $this->indentation = option('pedroborges.meta-tags.indentation', null);
-        $this->order = option('pedroborges.meta-tags.order', null);
+        $this->indentation = option('wearejust.meta-tags.indentation', null);
+        $this->order = option('wearejust.meta-tags.order', null);
         $this->tags = new Tags($this->indentation, $this->order);
 
-        $templates = option('pedroborges.meta-tags.templates', []);
-        $default = option('pedroborges.meta-tags.default', [
+        $templates = option('wearejust.meta-tags.templates', []);
+        $default = option('wearejust.meta-tags.default', [
             'title' => $page->isHomePage() ? site()->title() : $page->title(),
             'meta' => [
                 'description' => site()->description()
@@ -46,11 +47,11 @@ class MetaTags
         $templates = is_callable($templates) ? $templates($page, site()) : $templates;
 
         if (! is_array($this->data)) {
-            throw new Exception('Option "pedroborges.meta-tags.default" must return an array');
+            throw new Exception('Option "wearejust.meta-tags.default" must return an array');
         }
 
         if (! is_array($templates)) {
-            throw new Exception('Option "pedroborges.meta-tags.templates" must return an array');
+            throw new Exception('Option "wearejust.meta-tags.templates" must return an array');
         }
 
         if (isset($templates[$page->template()->name()])) {
