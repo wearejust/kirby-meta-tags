@@ -1,27 +1,20 @@
-# Kirby Meta Tags [![Release](https://img.shields.io/github/release/pedroborges/kirby-meta-tags.svg)](https://github.com/pedroborges/kirby-meta-tags/releases) [![Issues](https://img.shields.io/github/issues/pedroborges/kirby-meta-tags.svg)](https://github.com/pedroborges/kirby-meta-tags/issues)
+# Kirby Meta Tags [![Release](https://img.shields.io/github/release/wearejust/kirby-meta-tags.svg)](https://github.com/wearejust/kirby-meta-tags/releases) [![Issues](https://img.shields.io/github/issues/wearejust/kirby-meta-tags.svg)](https://github.com/wearejust/kirby-meta-tags/issues)
 
 HTML meta tags generator for Kirby. Supports [Open Graph](http://ogp.me), [Twitter Cards](https://dev.twitter.com/cards/overview), and [JSON Linked Data](https://json-ld.org) out of the box.
 
 ## Requirements
 - Kirby 3
-- PHP 7.1+
+- PHP 8.0
 
 ## Installation
 
 ### Download
 Download and copy this repository to `site/plugins/meta-tags`.
 
-### Git submodule
-```
-git submodule add https://github.com/pedroborges/kirby-meta-tags.git site/plugins/meta-tags
-```
-
 ### Composer
 ```
-composer require pedroborges/kirby-meta-tags
+composer require wearejust/kirby-meta-tags
 ```
-
-> For Kirby 2, you can download [v1.1.1](https://github.com/pedroborges/kirby-meta-tags/archive/v1.1.1.zip) and copy the files to `site/plugins/meta-tags`.
 
 ## Basic Usage
 After installing the Meta Tags plugin, you need to add one line to the `head` element on your template, or `header.php` snippet:
@@ -52,7 +45,7 @@ The plugin ships with some default meta tags enabled for your convenience:
 ```php
 return [
     // other options...
-    'pedroborges.meta-tags.default' => function ($page, $site) {
+    'wearejust.meta-tags.default' => function ($page, $site) {
         return [
             'title' => $site->title(),
             'meta' => [
@@ -74,7 +67,7 @@ return [
 ]
 ```
 
-**The `pedroborges.meta-tags.default` option is applied to all pages on your Kirby site.** Of course you can change the defaults. In order to do that, just copy this example to your `site/config/config.php` file and tweak it to fit your website needs.
+**The `wearejust.meta-tags.default` option is applied to all pages on your Kirby site.** Of course you can change the defaults. In order to do that, just copy this example to your `site/config/config.php` file and tweak it to fit your website needs.
 
 ### Templates
 Following the flexible spirit of Kirby, you also have the option to add template specific meta tags:
@@ -82,7 +75,7 @@ Following the flexible spirit of Kirby, you also have the option to add template
 ```php
 return [
     // other options...
-    'pedroborges.meta-tags.templates' => function ($page, $site) {
+    'wearejust.meta-tags.templates' => function ($page, $site) {
         return [
             'song' => [
                 'og' => [
@@ -108,13 +101,13 @@ For more information on all the `meta`, `link`, Open Graph and Twitter Card tags
 - [Twitter Cards](https://dev.twitter.com/cards/overview)
 
 ## Options
-Both the `pedroborges.meta-tags.default` and `pedroborges.meta-tags.templates` accept similar values:
+Both the `wearejust.meta-tags.default` and `wearejust.meta-tags.templates` accept similar values:
 
-### `pedroborges.meta-tags.default`
+### `wearejust.meta-tags.default`
 It accepts an array containing any or all of the following keys: `title`, `meta`, `link`, `og`, and `twitter`. With the exception of `title`, all other groups must return an array of key-value pairs. Check out the [tag groups](#tag-groups) section to learn which value types are accepted by each key.
 
 ```php
-'pedroborges.meta-tags.default' => function ($page, $site) {
+'wearejust.meta-tags.default' => function ($page, $site) {
     return [
         'title' => 'Site Name',
         'meta' => [ /* meta tags */ ],
@@ -126,11 +119,11 @@ It accepts an array containing any or all of the following keys: `title`, `meta`
 }
 ```
 
-### `pedroborges.meta-tags.templates`
+### `wearejust.meta-tags.templates`
 This option allows you to define a template specific set of meta tags. It must return an array where each key corresponds to the template name you are targeting.
 
 ```php
-'pedroborges.meta-tags.templates' => function ($page, $site) {
+'wearejust.meta-tags.templates' => function ($page, $site) {
     return [
         'article' => [ /* tags groups */ ],
         'about' => [ /* tags groups */ ],
@@ -139,7 +132,7 @@ This option allows you to define a template specific set of meta tags. It must r
 }
 ```
 
-When a key matches the current page template name, it is merged and overrides any repeating properties defined on the `pedroborges.meta-tags.default` option so you don't have to repeat yourself.
+When a key matches the current page template name, it is merged and overrides any repeating properties defined on the `wearejust.meta-tags.default` option so you don't have to repeat yourself.
 
 ## Tag Groups
 These groups accept string, closure, or array as their values. Being so flexible, the sky is the limit to what you can do with Meta Tags!
@@ -244,7 +237,7 @@ Where you can define [Open Graph](http://ogp.me) `<meta>` elements.
 Of course you can use Open Graph [structured objects](http://ogp.me/#structured). Let's see a blog post example:
 
 ```php
-'pedroborges.meta-tags.templates' => function ($page, $site) {
+'wearejust.meta-tags.templates' => function ($page, $site) {
     return [
         'article' => [ // template name
             'og' => [  // tags group name
@@ -377,7 +370,7 @@ Use this tag group to add [JSON Linked Data](https://json-ld.org) schemas to you
 </p></details>
 
 ## Change Log
-All notable changes to this project will be documented at: <https://github.com/pedroborges/kirby-meta-tags/blob/master/CHANGELOG.md>
+All notable changes to this project will be documented at: <https://github.com/wearejust/kirby-meta-tags/blob/master/CHANGELOG.md>
 
 ## License
 The Meta Tags plugin is open-sourced software licensed under the [MIT license](http://www.opensource.org/licenses/mit-license.php).

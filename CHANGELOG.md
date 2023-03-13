@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [3.0] - 2023-03-13
+### Fixed
+- Fixed PHP8.2 compatiliby
+- Take over package from pedroborges; big thanks to him!
+
+### Breaking
+- We've changed the references from pedroborges to wearejust
+
+
 ## [2.1.0] - 2021-07-19
 ### Fixed
 - Instance cache. It now caches one instance per page.
